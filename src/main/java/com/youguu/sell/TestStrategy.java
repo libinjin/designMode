@@ -5,15 +5,28 @@ import com.youguu.sell.startegyImp.CashRebate;
 import com.youguu.sell.startegyImp.CashReturn;
 
 import java.io.Console;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class TestStrategy {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
 
         //执行普通收费
         Context context = null;
 
         String type = "normal";
+
+
+        Class cls = Class.forName("");
+
+        Object object = cls.newInstance();
+
+        Method method = cls.getMethod("",java.lang.String.class);
+
+        method.invoke(object, "asf");//反射执行
+
+
 
         switch (type){
             case "normal":
